@@ -16,8 +16,8 @@ export default function App(){
     <div className="font-sans">
        <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/make-payments" element={<MakePayments />} />
-        <Route path="loans" element={<RateAndFee />}/>
+        <Route path="/payments" element={<MakePayments />} />
+        <Route path="/loans" element={<RateAndFee />}/>
        </Routes>
             {/* Hero Section */}
              </div>

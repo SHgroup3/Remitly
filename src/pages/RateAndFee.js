@@ -1,4 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react'; 
+
+// Temporary placeholder arrays
+const cadAmounts = [100, 250, 500, 1000, 2000];
+const pkrAmounts = [20000, 40000, 60000, 80000, 100000];
+
+// Simple reusable button component
+const ConversionButton = ({ amount, currency, isReceive }) => (
+  <button
+    className={`px-4 py-2 rounded-full border border-gray-300 text-sm font-medium hover:bg-teal-600 hover:text-white transition`}
+  >
+    {isReceive ? `${amount.toLocaleString()} ${currency}` : `${amount} ${currency}`}
+  </button>
+);
+
+
 
 const Step = ({ number, children }) => (
   <div className="flex items-start mb-6 last:mb-0">
@@ -9,7 +25,51 @@ const Step = ({ number, children }) => (
   </div>
 );
 
+const faqData = [
+    {
+        question: "How much does it cost to send money to Pakistan?",
+        answer: "The cost of sending money varies based on the transfer speed and payment method. You will see the exact fees and exchange rate before confirming your transfer."
+    },
+    {
+        question: "Does Remitly offer discounts for new customers?",
+        answer: "Yes, new customers often receive a special promotional exchange rate on their first transfer."
+    },
+    {
+        question: "How can I pay for my money transfer?",
+        answer: "You can typically pay using your bank account, credit card, or debit card."
+    },
+    {
+        question: "What are the ways to receive a money transfer?",
+        answer: "Recipients can receive money via bank deposit, cash pickup at partner locations, or mobile wallet."
+    },
+    {
+        question: "Is it safe to send money online with Remitly?",
+        answer: "Remitly uses industry-standard security measures and encryption to protect your money and personal data."
+    },
+    {
+        question: "How do I track my money transfer?",
+        answer: "You can track the status of your transfer in real-time through the Remitly app or website."
+    },
+    {
+        question: "What are the money transfer limits?",
+        answer: "Transfer limits depend on your country, verification level, and the recipient country. You can check your current limits in your account settings."
+    },
+    {
+        question: "How do I contact Remitly customer service?",
+        answer: "Customer service can be reached via phone, chat, or email, available 24/7."
+    },
+];
+
+
+
 const RateAndFee = () => {
+    // State to manage which FAQ item is currently open
+    const [openIndex, setOpenIndex] = useState(null);
+
+    // Function to toggle the open/close state of an FAQ item
+    const toggleFAQ = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
   return (
     <div className="min-h-screen bg-white font-sans">
         <div className="bg-yellow-100 text-center p-3 rounded-lg text-sm mb-8 font-semibold">
@@ -397,7 +457,6 @@ Any FX rate shown applies when you pay by Bank account or Interac e-Transfer. Ne
     </div>
 </section>
  
----
  
 {/* 3. Get Help Section */}
 <section className="text-center py-6 px-4"> 
@@ -405,11 +464,110 @@ Any FX rate shown applies when you pay by Bank account or Interac e-Transfer. Ne
         Get help with sending CAD to PKR
     </h3>
     {/* Placeholder for a link or button to the help page */}
-    <button className="mt-4 text-teal-600 hover:text-teal-700 font-semibold underline">
-        Visit our Help Center
-    </button>
 </section>
 
+<section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+            <div className="max-w-4xl mx-auto">
+                
+                {/* Section Title */}
+                <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-10">
+                    Remitly FAQ
+                </h2>
+
+                {/* FAQ Items (Accordion) */}
+                <div className="border-t border-gray-200">
+                    {faqData.map((item, index) => (
+                        <div key={index} className="border-b border-gray-200">
+                            
+                            {/* Question (Clickable Header) */}
+                            <button
+                                onClick={() => toggleFAQ(index)}
+                                className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
+                            >
+                                <span className="text-base sm:text-lg font-medium text-gray-700 hover:text-blue-600">
+                                    {item.question}
+                                </span>
+                                {/* Icon that changes based on state */}
+                                <span className="text-gray-500">
+                                    {openIndex === index ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                                </span>
+                            </button>
+
+                            {/* Answer (Collapsible Content) */}
+                            {openIndex === index && (
+                                <div className="pb-4 pt-0">
+                                    <p className="text-sm text-gray-600 pl-4 pr-10 leading-relaxed">
+                                        {item.answer}
+                                    </p>
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+
+                {/* Bottom CTA (As seen in the screenshot) */}
+                <div className="mt-20 text-center">
+                    <p className="text-2xl font-bold text-gray-800 mb-2">
+                        Reliable money transfers when sending from Canada to Pakistan
+                    </p>
+                    <p className="text-sm text-gray-500 mb-6">
+                        Send and receive money with speed you can rely on.
+                    </p>
+                    <button className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-lg">
+                        Send money
+                    </button>
+                </div>
+
+            </div>
+        </section>
+        <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            
+            {/* --- 1. CAD Conversion Rates Section --- */}
+            <div className="mb-12">
+                <div className="text-center mb-8 max-w-4xl mx-auto">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">
+                        CAD conversion rates
+                    </h2>
+                </div>
+
+                {/* Buttons Container: Key to Responsiveness */}
+                <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-6xl mx-auto">
+                    {/* flex-wrap: Jab screen choti hogi, toh buttons agle line mein chale jayenge. */}
+                    {/* gap-3/gap-4: Buttons ke beech mein thodi space maintain karega. */}
+                    
+                    {cadAmounts.map((amount) => (
+                        <ConversionButton 
+                            key={amount} 
+                            amount={amount} 
+                            currency="CAD" 
+                        />
+                    ))}
+                </div>
+            </div>
+
+            {/* --- 2. PKR Conversion Rates Section --- */}
+            <div>
+                <div className="text-center mb-8 max-w-4xl mx-auto">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">
+                        PKR conversion rates
+                    </h2>
+                </div>
+
+                {/* Buttons Container: Key to Responsiveness */}
+                <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-6xl mx-auto">
+                    
+                    {pkrAmounts.map((amount) => (
+                        <ConversionButton 
+                            key={amount} 
+                            amount={amount} 
+                            currency="PKR" 
+                            isReceive={true}
+                        />
+                    ))}
+                </div>
+            </div>
+            
+        </section>
 
     </div>
   );

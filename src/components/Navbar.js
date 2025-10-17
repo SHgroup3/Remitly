@@ -156,7 +156,7 @@ export default function Navbar() {
           {active === "business" && (
             <>
               <Link
-                to="/make-payments"
+                to="/payments"
                 className="text-gray-700 hover:text-teal-700 font-medium"
               >
                 Make Payment
