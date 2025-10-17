@@ -22,7 +22,7 @@ export default function Navbar() {
         </div>
 
           {/* Personal | Business Buttons */}
-          <div className="hidden sm:flex bg-white text-black font-bold py-6 px-6 rounded-full px-6 py-3 items-center space-x-6 shadow-md">
+          <div className="flex bg-white text-black font-bold py-3 px-4 rounded-full items-center space-x-4 shadow-md">
             <span
               onClick={() =>
                 setActive(active === "personal" ? null : "personal")

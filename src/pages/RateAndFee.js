@@ -195,7 +195,13 @@ Any FX rate shown applies when you pay by Bank account or Interac e-Transfer. Ne
         {/* 2. Why choose Remitly? (Features Section) 
           - Uses a grid for a clean, responsive four-column layout, similar to the section above.
         */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 mr-64 ml-64 bg-gray-50">
+        <section className="py-16 px-4 bg-gray-50 md:px-12 lg:px-64"> 
+    {/* Changes Explained:
+        1. mr-64 aur ml-64 ko hata diya gaya hai.
+        2. px-4: Mobile (default) par choti padding.
+        3. md:px-12: Tablet par thodi zyada padding.
+        4. lg:px-64: Large screens par bada space dene ke liye.
+    */}
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-2">
               Why choose Remitly?
@@ -203,7 +209,12 @@ Any FX rate shown applies when you pay by Bank account or Interac e-Transfer. Ne
           </div>
           
           {/* Responsive Grid Layout with Icons */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4"> 
+            {/* Change: Grid ko aur responsive banaya gaya hai.
+                - grid-cols-1: Mobile (default) par ek-ek item column mein.
+                - sm:grid-cols-2: Small screens (jaise bade phones/tablet) par do items.
+                - md:grid-cols-4: Tablet/Desktop par chaar items.
+            */}
             
             {/* Feature 1: Guaranteed Delivery */}
             <div className="text-center p-4">
@@ -246,143 +257,158 @@ Any FX rate shown applies when you pay by Bank account or Interac e-Transfer. Ne
         {/* 3. Download the App Section (Dark Background)
           - Uses flexbox for alignment: flex-col on mobile, flex-row on larger screens.
         */}
-        <section className="bg-blue-900 text-white py-16 px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row justify-between items-center max-w-5xl mx-auto">
+       <section className="bg-blue-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col lg:flex-row justify-between items-center max-w-5xl mx-auto">
+        
+        {/* Left/Top Content (Download info) */}
+        <div className="text-center lg:text-left mb-8 lg:mb-0 lg:w-1/2">
+            <h3 className="text-xl font-semibold mb-4">Download the app:</h3>
             
-            {/* Left/Top Content (Download info) */}
-            <div className="text-center lg:text-left mb-8 lg:mb-0 lg:w-1/2">
-              <h3 className="text-xl font-semibold mb-4">Download the app:</h3>
-              <div className="flex justify-center lg:justify-start space-x-4 mb-4">
+            {/* CHANGE: Mobile-First: Column stack, Medium screen: row */}
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4 mb-4">
                 {/* Placeholder App Store Buttons */}
-                <button className="bg-black text-white px-4 py-2 rounded-lg text-sm">
+                <button className="bg-black text-white px-4 py-2 rounded-lg text-sm w-4/5 sm:w-auto mx-auto sm:mx-0">
                     Get it on <span className="font-bold">Google Play</span>
                 </button>
-                <button className="bg-black text-white px-4 py-2 rounded-lg text-sm">
+                <button className="bg-black text-white px-4 py-2 rounded-lg text-sm w-4/5 sm:w-auto mx-auto sm:mx-0">
                     Download on the <span className="font-bold">App Store</span>
                 </button>
-              </div>
-              
-              {/* QR Code Placeholder */}
-              <div className="bg-white p-2 inline-block rounded-md mt-4"> {/* QR Code image */}
-                <img src='https://cdn.remitly.com/images/v1/img/qr_code_tue_feb_06_2024.bD56TI2smTyVsGd5.png'
-                alt='QRcode'
-                className='h-20 w-20'/>
-              </div>
-              <p className="text-sm mt-2">Scan the code with your phone to get the app.</p>
             </div>
+            
+            {/* QR Code Placeholder */}
+            <div className="flex flex-col items-center lg:items-start">
+                <div className="bg-white p-2 inline-block rounded-md mt-4"> {/* QR Code image */}
+                    <img 
+                        src='https://cdn.remitly.com/images/v1/img/qr_code_tue_feb_06_2024.bD56TI2smTyVsGd5.png'
+                        alt='QRcode'
+                        className='h-20 w-20'
+                    />
+                </div>
+                <p className="text-sm mt-2">Scan the code with your phone to get the app.</p>
+            </div>
+        </div>
 
-            {/* Right/Bottom Content (Tagline) */}
-            <div className="lg:w-1/2 text-center lg:text-right">
-              <p className="text-5xl md:text-6xl font-extrabold leading-tight">
+        {/* Right/Bottom Content (Tagline) */}
+        <div className="lg:w-1/2 text-center lg:text-right">
+            {/* CHANGE: Font size adjusted for better scaling */}
+            <p className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mt-6 lg:mt-0">
                 Fast. Easy. <br/> Reliable.
-              </p>
-            </div>
-          </div>
-        </section>
+            </p>
+        </div>
+    </div>
+</section>
 
         {/* 4. How to convert Section (Simplified Placeholder)
         */}
-        <section className="bg-blue-50 py-12 px-6 rounded-xl shadow-lg mb-16">
-        <h2 className="text-3xl font-bold text-center text-gray-700 mb-10">
-          How to convert CAD to PKR
-        </h2>
+       <section className="bg-blue-50 py-12 px-6 rounded-xl shadow-lg mb-16 max-w-6xl mx-auto">
+    <h2 className="text-3xl font-bold text-center text-gray-700 mb-10">
+        How to convert CAD to PKR
+    </h2>
 
-        {/* Responsive Layout for Steps and Image */}
-        <div className="flex flex-col md:flex-row items-center md:space-x-12 ml-64 mr-64">
-          
-          {/* Left Side: Steps (Takes priority on mobile, equal width on desktop) */}
-          <div className="w-full md:w-1/2 order-2 md:order-1 mt-8 md:mt-0">
+    {/* Responsive Layout for Steps and Image */}
+    {/* CHANGE: Fixed margins (ml-64 mr-64) removed. max-w-4xl added for content width */}
+    <div className="flex flex-col md:flex-row items-center md:space-x-12 max-w-4xl mx-auto">
+        
+        {/* Left Side: Steps */}
+        <div className="w-full md:w-1/2 order-2 md:order-1 mt-8 md:mt-0">
             <div className="space-y-4">
-              <Step number={1}>
-                Create an account using your email address through our **website** or our app on the <a href="#" className="text-teal-600 hover:underline font-semibold">App Store</a> or <a href="#" className="text-teal-600 hover:underline font-semibold">Google Play</a>.
-              </Step>
-              <Step number={2}>
-                Select the currency, the amount you want to send, and the delivery speed.
-              </Step>
-              <Step number={3}>
-                Choose how your money is delivered.
-              </Step>
-              <Step number={4}>
-                Enter the name and information of the person who will receive the money.
-              </Step>
-              <Step number={5}>
-                Enter your payment information and select **confirm transfer** to send.
-              </Step>
+                <Step number={1}>
+                    Create an account using your email address through our **website** or our app on the <a href="#" className="text-teal-600 hover:underline font-semibold">App Store</a> or <a href="#" className="text-teal-600 hover:underline font-semibold">Google Play</a>.
+                </Step>
+                <Step number={2}>
+                    Select the currency, the amount you want to send, and the delivery speed.
+                </Step>
+                <Step number={3}>
+                    Choose how your money is delivered.
+                </Step>
+                <Step number={4}>
+                    Enter the name and information of the person who will receive the money.
+                </Step>
+                <Step number={5}>
+                    Enter your payment information and select **confirm transfer** to send.
+                </Step>
             </div>
-          </div>
-
-          {/* Right Side: Illustration (Moves to top on mobile, equal width on desktop) */}
-          <div className="w-full md:w-1/2 order-1 md:order-2 flex justify-center items-center">
-            {/* Placeholder for the illustration/diagram */}
-            <div className="w-90 h-80 bg-blue-100 flex items-center justify-center">
-              <span className="text-4xl text-gray-500 font-extrabold">
-                {/* Visual representation of money transfer (Placeholder for SVG/Image) */}
-                <span>
-                    <img src='https://media.remitly.io/coin_currency_sun_jun_29_2025.kdrBAroZQQmMuN54.svg'
-                    alt='CDR'
-                    className=''/>
-                </span>
-              </span>
-            </div>
-          </div>
         </div>
-      </section>
+
+        {/* Right Side: Illustration */}
+        <div className="w-full md:w-1/2 order-1 md:order-2 flex justify-center items-center">
+            {/* Placeholder for the illustration/diagram */}
+            {/* CHANGE: Added responsive classes for the image container */}
+            <div className="w-full h-auto max-w-xs md:max-w-none flex items-center justify-center">
+                <span>
+                    <img 
+                        src='https://media.remitly.io/coin_currency_sun_jun_29_2025.kdrBAroZQQmMuN54.svg'
+                        alt='CDR'
+                        className='w-full h-auto' // Ensures image scales with container
+                    />
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
 
       {/* 2. Partner Logos Section */}
-      <section className="text-center mb-16 bg-white">
-        <h2 className="text-xl font-bold text-gray-900 mb-6">
-          Where to send Pakistani rupees in Pakistan?
-        </h2>
-        <p className="text-gray-600 mb-8 max-w-3xl mx-auto">
-          Remitly gives you options when sending money to Pakistan. Depending on your recipient's location, choose from trusted banks, cash pickup, bank deposit, mobile wallet, and more delivery options.
-        </p>
+    <section className="text-center mb-16 bg-white py-8 px-4 sm:px-6"> 
+    <h2 className="text-xl font-bold text-gray-900 mb-6">
+        Where to send Pakistani rupees in Pakistan?
+    </h2>
+    <p className="text-gray-600 mb-8 max-w-3xl mx-auto">
+        Remitly gives you options when sending money to Pakistan. Depending on your recipient's location, choose from trusted banks, cash pickup, bank deposit, mobile wallet, and more delivery options.
+    </p>
 
-        {/* Logos Grid: Flexible grid for responsiveness */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-7 gap-8 items-center justify-center max-w-5xl mx-auto">
-          {/* Placeholder Logos (replace with actual image tags or components) */}
-          <img src='https://cdn.remitly.com/images/v1/img/mebl_mon_jan_06_2025.TIp0X01UDzAo2MnS.png'
-          alt='Meezan Bank'
-          className=''/>
-          <img src='https://cdn.remitly.com/images/v1/img/easypaisa_logo_wed_jan_25_2023.02DZRiKVFe7OYnUw.png'
-          alt='EasyPaisa'
-          className=''/>
-           <img src='https://cdn.remitly.com/images/v1/img/united_bank_limited1x_tue_jun_05.2Ro0fQ6RA52cQez7rK9WDV.png'
-          alt='UBL'
-          className=''/>
-           <img src='https://cdn.remitly.com/images/v1/img/dollar_east_thu_sep_18_2025.DOzd14yEZXwxmZJV.jpg'
-          alt='DollarCast'
-          className=''/>
-           <img src='https://cdn.remitly.com/images/v1/img/jazzcashlogo_wed_jan_25_2023.jshl7lHJrtfw8vNS.jpg'
-          alt='HBL'
-          className=''/>
-           <img src='https://cdn.remitly.com/images/v1/img/image_1_tue_jan_31_2023.3lsXL2Qo4cx2eYHD.png'
-          alt='Jazzcas'
-          className=''/>
-          <img src='https://cdn.remitly.com/images/v1/img/paragon_exchange_thu_sep_18_2025.beKod6o93rAHhzTe.png'
-          alt='exchange'
-          className=''/>
-          {[].map((name, index) => (
-            <div 
-              key={index} 
-              className="p-3 grayscale hover:grayscale-0 transition duration-300 transform hover:scale-105"
-            >
-              <span className="text-sm font-semibold text-gray-700">{name}</span>
-              {/*  - Use an image tag if available */}
-            </div>
-          ))}
-        </div>
-      </section>
-      
-      {/* 3. Get Help Section */}
-      <section className="text-center py-6">
-        <h3 className="text-2xl font-bold text-gray-900">
-          Get help with sending CAD to PKR
-        </h3>
-        {/* Placeholder for a link or button to the help page */}
-        <button className="mt-4 text-teal-600 hover:text-teal-700 font-semibold underline">
-          Visit our Help Center
-        </button>
-      </section>
+    {/* Logos Grid: Flexible grid for responsiveness */}
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-7 gap-6 items-center justify-center max-w-5xl mx-auto">
+        {/* Placeholder Logos (Main changes in img classes) */}
+        <img 
+            src='https://cdn.remitly.com/images/v1/img/mebl_mon_jan_06_2025.TIp0X01UDzAo2MnS.png'
+            alt='Meezan Bank'
+            className='w-full h-auto' // CHANGE: Added w-full h-auto
+        />
+        <img 
+            src='https://cdn.remitly.com/images/v1/img/easypaisa_logo_wed_jan_25_2023.02DZRiKVFe7OYnUw.png'
+            alt='EasyPaisa'
+            className='w-full h-auto' // CHANGE: Added w-full h-auto
+        />
+         <img 
+            src='https://cdn.remitly.com/images/v1/img/united_bank_limited1x_tue_jun_05.2Ro0fQ6RA52cQez7rK9WDV.png'
+            alt='UBL'
+            className='w-full h-auto' // CHANGE: Added w-full h-auto
+        />
+         <img 
+            src='https://cdn.remitly.com/images/v1/img/dollar_east_thu_sep_18_2025.DOzd14yEZXwxmZJV.jpg'
+            alt='DollarCast'
+            className='w-full h-auto' // CHANGE: Added w-full h-auto
+        />
+         <img 
+            src='https://cdn.remitly.com/images/v1/img/jazzcashlogo_wed_jan_25_2023.jshl7lHJrtfw8vNS.jpg'
+            alt='HBL'
+            className='w-full h-auto' // CHANGE: Added w-full h-auto
+        />
+         <img 
+            src='https://cdn.remitly.com/images/v1/img/image_1_tue_jan_31_2023.3lsXL2Qo4cx2eYHD.png'
+            alt='Jazzcas'
+            className='w-full h-auto' // CHANGE: Added w-full h-auto
+        />
+        <img 
+            src='https://cdn.remitly.com/images/v1/img/paragon_exchange_thu_sep_18_2025.beKod6o93rAHhzTe.png'
+            alt='exchange'
+            className='w-full h-auto' // CHANGE: Added w-full h-auto
+        />
+    </div>
+</section>
+ 
+---
+ 
+{/* 3. Get Help Section */}
+<section className="text-center py-6 px-4"> 
+    <h3 className="text-2xl font-bold text-gray-900">
+        Get help with sending CAD to PKR
+    </h3>
+    {/* Placeholder for a link or button to the help page */}
+    <button className="mt-4 text-teal-600 hover:text-teal-700 font-semibold underline">
+        Visit our Help Center
+    </button>
+</section>
 
 
     </div>
