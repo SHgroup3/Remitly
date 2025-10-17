@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <>
       {/* Main Navbar */}
-      <nav className="flex justify-between items-center px-4 md:px-12 py-4 bg-white shadow-sm">
+      <nav className="flex justify-between items-center px-4 md:px-16 py-8 bg-white shadow-sm">
         {/* Left Side: Logo + Personal/Business */}
         <div className="flex items-center space-x-4 md:space-x-6">
           {/* Logo */}
@@ -22,7 +22,7 @@ export default function Navbar() {
         </div>
 
           {/* Personal | Business Buttons */}
-          <div className="hidden sm:flex bg-white text-black font-bold rounded-full px-6 py-3 items-center space-x-6 shadow-md">
+          <div className="hidden sm:flex bg-white text-black font-bold py-6 px-6 rounded-full px-6 py-3 items-center space-x-6 shadow-md">
             <span
               onClick={() =>
                 setActive(active === "personal" ? null : "personal")
@@ -140,7 +140,7 @@ export default function Navbar() {
           {active === "personal" && (
             <>
               <Link
-                to="/accounts"
+                to="/"
                 className="text-gray-700 hover:text-teal-700 font-medium"
               >
                 Send Money
@@ -156,13 +156,13 @@ export default function Navbar() {
           {active === "business" && (
             <>
               <Link
-                to="/corporate"
+                to="/make-payments"
                 className="text-gray-700 hover:text-teal-700 font-medium"
               >
                 Make Payment
               </Link>
               <Link
-                to="/investments"
+                to="/loans"
                 className="text-gray-700 hover:text-teal-700 font-medium"
               >
                 Rate and Fees
