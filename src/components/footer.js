@@ -1,45 +1,11 @@
 import React from "react";
 // import { Link } from "react-router-dom";
+import vneed from '../assets/images/vneed.jpg'
 
 export default function Footer(){
     return(
         <footer className="bg-teal-900 text-white py-12 mt-0">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-5 gap-8">
-        {/* Company */}
-        <div>
-          <h3 className="font-semibold text-lg mb-3">Company</h3>
-          <ul className="space-y-2 text-sm">
-            <li><a href="/about" className="hover:text-gray-300">About</a></li>
-            <li><a href="https://blog.remitly.com" className="hover:text-gray-300">Blog</a></li>
-            <li><a href="https://news.remitly.com" className="hover:text-gray-300">Newsroom</a></li>
-            <li><a href="https://careers.remitly.com" className="hover:text-gray-300">Careers</a></li>
-            <li><a href="https://ir.remitly.com" className="hover:text-gray-300">Investors</a></li>
-          </ul>
-        </div>
-
-        {/* Products */}
-        <div>
-          <h3 className="font-semibold text-lg mb-3">Products</h3>
-          <ul className="space-y-2 text-sm">
-            <li><a href="/send-money" className="hover:text-gray-300">Send Money</a></li>
-            <li><a href="/business" className="hover:text-gray-300">Remitly Business</a></li>
-            <li><a href="/login" className="hover:text-gray-300">Log In</a></li>
-            <li><a href="/signup" className="hover:text-gray-300">Sign Up</a></li>
-          </ul>
-        </div>
-
-        {/* Resources */}
-        <div>
-          <h3 className="font-semibold text-lg mb-3">Resources</h3>
-          <ul className="space-y-2 text-sm">
-            <li><a href="/rates" className="hover:text-gray-300">Rates & Fees</a></li>
-            <li><a href="/swift-codes" className="hover:text-gray-300">Swift Codes</a></li>
-            <li><a href="/partners" className="hover:text-gray-300">Partners</a></li>
-            <li><a href="/reviews" className="hover:text-gray-300">Reviews</a></li>
-            <li><a href="/refer" className="hover:text-gray-300">Refer Friends</a></li>
-          </ul>
-        </div>
-
         {/* Support */}
         <div>
           <h3 className="font-semibold text-lg mb-3">Support</h3>
@@ -75,7 +41,7 @@ export default function Footer(){
         <div className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-6 md:px-12">
           {/* Logo */}
           <img
-            src="https://media.remitly.io/remitly_logo_horizontal_white_tu.zrhAxFCrR5s4IlKb.svg"
+            src={vneed}
             alt="Remitly"
             className="w-40 mb-4 md:mb-0"
           />
@@ -90,7 +56,7 @@ export default function Footer(){
 
         {/* Copyright */}
         <p className="text-center text-gray-400 text-sm mt-6">
-          © 2012 - 2025 Remitly, Inc. All rights reserved.
+          © 2012 - 2025 Vneed Pay, Inc. All rights reserved.
         </p>
       </div>
     </footer>

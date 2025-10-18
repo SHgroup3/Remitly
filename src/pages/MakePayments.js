@@ -31,32 +31,32 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const faqs = [
   {
-    question: "How do I sign up for a Remitly Business account?",
+    question: "How do I sign up for a Vneed Pay Business account?",
     answer:
-      "Sign up is easy–follow these steps to create your account: If you have a Remitly personal account, make sure you've signed out.",
+      "Sign up is easy–follow these steps to create your account: If you have a Vneed Pay personal account, make sure you've signed out.",
   },
   {
-    question: "Who can use Remitly for business payments?",
+    question: "Who can use Vneed Pay for business payments?",
     answer:
-      "Remitly Business is designed for small and medium-sized companies that send payments to international partners, suppliers, or employees.",
+      "Vneed Pay Business is designed for small and medium-sized companies that send payments to international partners, suppliers, or employees.",
   },
   {
-    question: "What do I need to open a Remitly Business account?",
+    question: "What do I need to open a Vneed Pay Business account?",
     answer:
       "You’ll need valid business documents, identification, and banking information to verify your account.",
   },
   {
-    question: "What do I get with a Remitly Business account?",
+    question: "What do I get with a Vneed Pay Business account?",
     answer:
       "You get fast and secure cross-border payments, competitive exchange rates, and transparent fees.",
   },
   {
-    question: "Is there a fee to open a Remitly Business account?",
+    question: "Is there a fee to open a Vneed Pay Business account?",
     answer:
-      "No, opening a Remitly Business account is completely free. Transaction fees depend on the transfer details.",
+      "No, opening a Vneed Pay Business account is completely free. Transaction fees depend on the transfer details.",
   },
   {
-    question: "How much money can I send with a Remitly Business account?",
+    question: "How much money can I send with a Vneed Pay Business account?",
     answer:
       "Transfer limits depend on your account verification level and destination country. Higher limits are available upon request.",
   },
@@ -89,16 +89,16 @@ const RemitlyBusinessContent = () => {
           <div className="order-2 lg:order-1 text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight mb-4">
               Simplify payments with <br className="hidden sm:inline" />
-              <span className="text-teal-700">Remitly Business</span>
+              <span className="text-teal-700">Vneed Pay Business</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-lg lg:max-w-none mx-auto lg:mx-0">
-              Whether paying overseas teams, vendors, or invoices, Remitly makes moving money fast and easy and is backed by dedicated support.
+              Whether paying overseas teams, vendors, or invoices, Vneed Pay makes moving money fast and easy and is backed by dedicated support.
             </p>
             <p className="text-lg font-semibold text-gray-700 mb-8">
               Get a special promotion on your first transfer.
             </p>
             <button className="bg-teal-700 hover:bg-teal-800 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition duration-300 transform hover:scale-105 text-lg">
-              Create Remitly Business account
+              Create Vneed Pay Business account
             </button>
           </div>
           <div className="order-1 lg:order-2 mt-8 lg:mt-0 flex justify-center lg:justify-end">
@@ -262,7 +262,7 @@ const RemitlyBusinessContent = () => {
         Transfer money to our providers
     </h1>
     <p className="text-gray-600 mb-8 max-w-3xl mx-auto">
-        Remitly's global network includes 5 billion bank accounts, mobile wallets, and approximately 470,000 cash pickup options across the globe.
+        Vneed Pay's global network includes 5 billion bank accounts, mobile wallets, and approximately 470,000 cash pickup options across the globe.
     </p>
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-7 gap-6 items-center justify-center max-w-5xl mx-auto">
         <img 
@@ -303,7 +303,7 @@ const RemitlyBusinessContent = () => {
     </div>
 </section>
 <div className="bg-white text-center p-3 rounded-lg text-sm mb-8 font-semibold mt-12 lg:mt-20">
-              Trademarks, trade names and logos displayed are registered trademarks of their respective owners. No affiliation or endorsement of Remitly should be implied.
+              Trademarks, trade names and logos displayed are registered trademarks of their respective owners. No affiliation or endorsement of Vneed Pay should be implied.
             </div>
             <div className="bg-blue-50 w-full py-16 sm:py-24 mt-12 lg:mt-20">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -325,7 +325,7 @@ const RemitlyBusinessContent = () => {
                 
                 {/* Testimonial Text */}
                 <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6 font-medium">
-                    "Remitly has made it incredibly easy and affordable to pay my international employees. I can send payments directly to their bank accounts, quickly and reliably. It's been a game-changer for managing payroll across borders, giving me peace of mind and helping my team feel valued and secure."
+                    "Vneed Pay has made it incredibly easy and affordable to pay my international employees. I can send payments directly to their bank accounts, quickly and reliably. It's been a game-changer for managing payroll across borders, giving me peace of mind and helping my team feel valued and secure."
                 </p>
                 
                 {/* Author Info */}
@@ -338,7 +338,7 @@ const RemitlyBusinessContent = () => {
                     className='mb-5'/>
                 
                 <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6 font-medium">
-                    "It has been amazing to use Remitly. Fast, easy, and transparent fees—what else can you ask for?"
+                    "It has been amazing to use Vneed Pay. Fast, easy, and transparent fees—what else can you ask for?"
                 </p>
                 <p className="text-base sm:text-lg font-bold text-gray-900 mb-1">-Anas</p>
                 <p className="text-sm sm:text-base text-gray-500">Web development and design, Hexaforge, LLC</p>
@@ -508,7 +508,7 @@ const RemitlyBusinessContent = () => {
                             Dedicated business support
                         </h2> 
                         <ul className="list-disc list-inside text-lg sm:text-xl text-gray-600 leading-relaxed space-y-3 mb-8 max-w-xl mx-auto lg:mx-0">
-                            <li>Remitly Business accounts get fast, specialized help from our dedicated team.</li>
+                            <li>Vneed Pay Business accounts get fast, specialized help from our dedicated team.</li>
                             <li>Visit our Help Center or call for support.</li>
                         </ul>
                         <button className="bg-blue-600 text-white font-semibold py-3 px-8 rounded-md hover:bg-blue-700 transition duration-300 text-lg shadow-lg">
@@ -534,7 +534,7 @@ const RemitlyBusinessContent = () => {
     <section className="bg-[#0b2545] w-full text-white py-12 px-4 md:px-10">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-xl md:text-2xl font-semibold mb-10">
-          Beyond Borders: The Official Remitly Blog
+          Beyond Borders: The Official Vneed Pay Blog
         </h2>
 
         {/* Blog Grid */}

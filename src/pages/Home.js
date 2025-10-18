@@ -82,7 +82,7 @@ const bankname = [
       </section>
        <section className="text-center bg-white text-gray-700 py-20 px-4">
       <h2 className="text-3xl md:text-4xl font-bold mb-16">
-        Find out why millions worldwide trust Remitly
+        Find out why millions worldwide trust Vneed Pay
       </h2>
 
       <div className="flex flex-col md:flex-row justify-center items-start gap-16 md:gap-24">
@@ -122,7 +122,7 @@ const bankname = [
     <section className="text-center bg-white text-gray-700 py-10 px-2">
       <div class="rm-col-12 rm-col-md-10">
         <h2 class="text-center text-gray-700 text-3xl font-bold"><span>
-          Where to send money in Pakistan  with Remitly</span></h2><p class="f1k1kmpj text-lg"><span>
+          Where to send money in Pakistan  with Vneed Pay</span></h2><p class="f1k1kmpj text-lg"><span>
             Cash pickup, bank deposit, mobile wallet, and more delivery options with our trusted network in Pakistan. Click
             <p className="text-lg">your preferred provider to learn more.</p></span>
             </p>
@@ -187,7 +187,7 @@ const bankname = [
         </div>
       )}
       </div>
-      <p className="text-gray-700 text-sm py-2 px-2">Trademarks, trade names and logos displayed are registered trademarks of their respective owners. No affiliation or endorsement of Remitly should be implied.
+      <p className="text-gray-700 text-sm py-2 px-2">Trademarks, trade names and logos displayed are registered trademarks of their respective owners. No affiliation or endorsement of Vneed Pay should be implied.
 </p>
       </div>
     </section>

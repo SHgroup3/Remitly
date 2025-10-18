@@ -31,7 +31,7 @@ const faqData = [
         answer: "The cost of sending money varies based on the transfer speed and payment method. You will see the exact fees and exchange rate before confirming your transfer."
     },
     {
-        question: "Does Remitly offer discounts for new customers?",
+        question: "Does Vneed Pay offer discounts for new customers?",
         answer: "Yes, new customers often receive a special promotional exchange rate on their first transfer."
     },
     {
@@ -43,19 +43,19 @@ const faqData = [
         answer: "Recipients can receive money via bank deposit, cash pickup at partner locations, or mobile wallet."
     },
     {
-        question: "Is it safe to send money online with Remitly?",
-        answer: "Remitly uses industry-standard security measures and encryption to protect your money and personal data."
+        question: "Is it safe to send money online with Vneed Pay?",
+        answer: "Vneed Pay uses industry-standard security measures and encryption to protect your money and personal data."
     },
     {
         question: "How do I track my money transfer?",
-        answer: "You can track the status of your transfer in real-time through the Remitly app or website."
+        answer: "You can track the status of your transfer in real-time through the Vneed Pay app or website."
     },
     {
         question: "What are the money transfer limits?",
         answer: "Transfer limits depend on your country, verification level, and the recipient country. You can check your current limits in your account settings."
     },
     {
-        question: "How do I contact Remitly customer service?",
+        question: "How do I contact Vneed Pay customer service?",
         answer: "Customer service can be reached via phone, chat, or email, available 24/7."
     },
 ];
@@ -95,7 +95,7 @@ const RateAndFee = () => {
                 CAD to PKR
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
-                Remitly offers dependable exchange rates for <span className="font-bold">CAD to PKR</span> with no hidden fees. Join today and get a promotional rate of <span className="font-bold">204.63 PKR to 1 CAD</span> on your first money transfer.
+                Vneed Pay offers dependable exchange rates for <span className="font-bold">CAD to PKR</span> with no hidden fees. Join today and get a promotional rate of <span className="font-bold">204.63 PKR to 1 CAD</span> on your first money transfer.
               </p>
               {/* Image would go here for a richer component */}
               <div className="mt-6 text-gray-400 italic">
@@ -298,7 +298,7 @@ Any FX rate shown applies when you pay by Bank account or Interac e-Transfer. Ne
               <div className="text-4xl text-red-600 mb-4">🤝</div> {/* Placeholder Icon */}
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Trusted Worldwide</h3>
               <p className="text-sm text-gray-600">
-                Join millions from across the globe who trust Remitly for sending money home.
+                Join millions from across the globe who trust Vneed pay for sending money home.
               </p>
             </div>
           </div>
@@ -403,7 +403,7 @@ Any FX rate shown applies when you pay by Bank account or Interac e-Transfer. Ne
         Where to send Pakistani rupees in Pakistan?
     </h2>
     <p className="text-gray-600 mb-8 max-w-3xl mx-auto">
-        Remitly gives you options when sending money to Pakistan. Depending on your recipient's location, choose from trusted banks, cash pickup, bank deposit, mobile wallet, and more delivery options.
+        Vneed Pay gives you options when sending money to Pakistan. Depending on your recipient's location, choose from trusted banks, cash pickup, bank deposit, mobile wallet, and more delivery options.
     </p>
 
     {/* Logos Grid: Flexible grid for responsiveness */}
@@ -461,7 +461,7 @@ Any FX rate shown applies when you pay by Bank account or Interac e-Transfer. Ne
                 
                 {/* Section Title */}
                 <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-10">
-                    Remitly FAQ
+                    Vneed Pay FAQ
                 </h2>
 
                 {/* FAQ Items (Accordion) */}
