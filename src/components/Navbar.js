@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, MenuButton } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"; // for mobile menu icons
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Navbar() {
   const [active, setActive] = useState(null);
@@ -10,9 +10,7 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Main Navbar */}
       <nav className="flex justify-between items-center px-4 md:px-16 py-8 bg-white shadow-sm">
-        {/* Left Side: Logo + Personal/Business */}
         <div className="flex items-center space-x-4 md:space-x-6">
           {/* Logo */}
               <div className="flex items-center space-x-2">
@@ -21,7 +19,7 @@ export default function Navbar() {
           
         </div>
 
-          {/* Personal | Business Buttons */}
+
           <div className="flex bg-white text-black font-bold py-3 px-4 rounded-full items-center space-x-4 shadow-md">
             <span
               onClick={() =>
@@ -51,7 +49,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Hamburger (Mobile) */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="sm:hidden focus:outline-none"
@@ -63,7 +60,6 @@ export default function Navbar() {
           )}
         </button>
 
-        {/* Right Side */}
         <div
           className={`flex-col sm:flex-row sm:flex items-center sm:space-x-4 text-lg font-bold absolute sm:static bg-white sm:bg-transparent left-0 w-full sm:w-auto px-6 sm:px-0 pb-4 sm:pb-0 transition-all duration-300 ease-in-out ${
             mobileOpen
@@ -71,7 +67,6 @@ export default function Navbar() {
               : "top-[-500px] opacity-0 invisible sm:visible sm:opacity-100"
           }`}
         >
-          {/* Flags and Language */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
             <Menu as="div" className="relative inline-block mb-2 sm:mb-0">
               <MenuButton className="inline-flex items-center gap-x-1.5 px-3 py-2 text-sm font-semibold text-black hover:bg-gray-100 focus:outline-none rounded-full">
@@ -111,8 +106,6 @@ export default function Navbar() {
               </MenuButton>
             </Menu>
           </div>
-
-          {/* Auth Buttons */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mt-2 sm:mt-0">
             <Link
               to="/help"
@@ -129,8 +122,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-
-      {/* Submenu (Personal / Business) */}
       <div
         className={`overflow-hidden transition-all duration-500 ease-in-out ${
           active ? "max-h-32 opacity-100" : "max-h-0 opacity-0"

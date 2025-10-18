@@ -78,13 +78,7 @@ const RateAndFee = () => {
       
       {/* --- Main Content Area --- */}
       <main className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-        
-        {/*
-          The key for responsiveness:
-          - On mobile (default): Use a single column (flex-col).
-          - On medium screens (md:): Switch to a two-column layout (md:flex) 
-            where the right column is fixed-width and the left column takes the rest (flex-1).
-        */}
+      
         
         <div className="flex flex-col md:flex-row md:space-x-8">
               
@@ -109,12 +103,8 @@ const RateAndFee = () => {
             </div>
           </div>
           
-          {/* --- Right Form/Calculator Section (Fixed Width) --- */}
-          {/* - order-1/order-2 ensures the calculator appears first on mobile 
-              but to the right on desktop.
-            - md:w-96 sets a fixed width on medium screens and up. 
-            - On mobile, it defaults to full width (w-full).
-          */}
+          
+
           <div className="w-full md:w-96 order-1 md:order-2">
             <div className="bg-white shadow-xl rounded-lg p-6 border border-gray-200">
               
